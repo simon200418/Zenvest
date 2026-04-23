@@ -8,7 +8,6 @@ function App() {
 
   return (
     <>
-    <h1>Stock Application</h1>
         <HomePage/>
     </>
   )
