@@ -50,11 +50,11 @@
   }
 } */
 
-/* body {
+body {
   margin: 0;
 }
 
-#root {
+/* #root {
   width: 1126px;
   max-width: 100%;
   margin: 0 auto;
@@ -108,4 +108,8 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
-} */
+} */ 
+
+.nav-link{
+  margin-left: 40px;
+}

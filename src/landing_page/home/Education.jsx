@@ -10,7 +10,7 @@ const Education = () => {
         </div>
 
         <div className="col-6">
-          <h1 className='mb-4 fs-4'>Free and open market education</h1>
+          <h1 className='mb-4 fs-2'>Free and open market education</h1>
           <p className='text-muted'>Varsity, the largest online stock market education book in the world covering everything from the basics to advanced trading.</p>
           <a href="" style={{textDecoration:"none"}}>Varsity <i class="fa-solid fa-arrow-right"></i></a>
           

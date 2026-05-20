@@ -11,7 +11,7 @@ const Pricing = () => {
         
         </div>
         <div className="col-2"></div>
-        <div className="col-6">
+        <div className="col-6 mb-5">
           <div className="row text-center">
             <div className="col p-2 border">
               <h1 className=''>₹0</h1>
