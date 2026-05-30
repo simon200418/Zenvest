@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="row mt-5">
         <div className="col">
           <img src="media/Images/Companylogo1.png" alt="Logo" style={{width:"50%"}}/>
-          <p className='text-muted'>&copy; 2010 - 2026, Zerodha Broking Ltd. <br />
+          <p className='text-muted'>&copy; 2010 - 2026, Zenvest Broking Ltd. <br />
             All rights reserved.</p>
             <div className='link-underline-light text-muted'>
 
@@ -29,7 +29,7 @@ const Footer = () => {
 
                   <a href="https://www.apple.com/app-store/" target="_blank">
                     <img
-                      src="	https://zerodha.com/static/images/appstore-badge-light.svg"
+                      src="https://zerodha.com/static/images/appstore-badge-light.svg"
                       alt="App Store"
                       style={{ height: "40px" }}
                     />
@@ -77,7 +77,7 @@ const Footer = () => {
 
       <div className='mt-5 text-muted' style={{fontSize:"14px"}}>
         <p>
-          Zerodha Broking Ltd.: Member of NSE, BSE, MCX & MSEI – SEBI Registration no.: INZ000031633 CDSL/NSDL: Depository services through Zerodha Broking Ltd. – SEBI Registration no.: IN-DP-431-2019 Registered Address: Zerodha Broking Ltd., #153/154, 4th Cross, Dollars Colony, Opp. Clarence Public School, J.P Nagar 4th Phase, Bengaluru - 560078, Karnataka, India. For any complaints pertaining to securities broking please write to <a href=""> complaints@zerodha.com </a>, for DP related to <a href=""> dp@zerodha.com </a>. Please ensure you carefully read the Risk Disclosure Document as prescribed by SEBI | ICF
+          Zenvest Broking Ltd.: Member of NSE, BSE, MCX & MSEI – SEBI Registration no.: INZ000031633 CDSL/NSDL: Depository services through Zerodha Broking Ltd. – SEBI Registration no.: IN-DP-431-2019 Registered Address: Zerodha Broking Ltd., #153/154, 4th Cross, Dollars Colony, Opp. Clarence Public School, J.P Nagar 4th Phase, Bengaluru - 560078, Karnataka, India. For any complaints pertaining to securities broking please write to <a href=""> complaints@zerodha.com </a>, for DP related to <a href=""> dp@zerodha.com </a>. Please ensure you carefully read the Risk Disclosure Document as prescribed by SEBI | ICF
         <br /><br />
           Procedure to file a complaint on <a href=""> SEBI SCORES: </a> Register on SCORES portal. Mandatory details for filing complaints on SCORES: Name, PAN, Address, Mobile Number, E-mail ID. Benefits: Effective Communication, Speedy redressal of the grievances
         </p>
