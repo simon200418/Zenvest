@@ -1,19 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav
-      class="navbar navbar-expand-lg border-bottom"
+      class="navbar navbar-expand-lg border-bottom me-5"
       style={{ backgroundColor: "#FFFFFF" }}
     >
       <div class="container p-2">
-        <a class="navbar-brand" href="#">
+        <Link class="navbar-brand" to="/">
           <img
             src="media/Images/Companylogo1.png"
             alt="Logo"
             style={{ width: "20%" }}
           />
-        </a>
+        </Link>
         <button
           class="navbar-toggler"
           type="button"
@@ -25,34 +26,34 @@ const Navbar = () => {
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse me-5" id="navbarSupportedContent">
           <form class="d-flex" role="search">
             <ul class="navbar-nav mr-5 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+                <Link class="nav-link active" aria-current="page" to="/signup">
                   Signup
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <Link class="nav-link active" to="/about">
                   About
-                </a>
+                </Link>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+                <Link class="nav-link active" aria-current="page" to="/product">
                   Product
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <Link class="nav-link active" to="/pricing">
                   Pricing
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <Link class="nav-link active" to="/support">
                   Support
-                </a>
+                </Link>
               </li>
             </ul>
           </form>
