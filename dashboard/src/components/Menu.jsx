@@ -14,6 +14,13 @@ const Menu = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
 
+  const logout = () => {
+  localStorage.removeItem("token");
+  localStorage.removeItem("user");
+
+  window.location.href = "/login";
+};
+
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
 
@@ -93,6 +100,7 @@ const Menu = () => {
         <div className="profile" onClick={handleProfileClick}>
           <div className="avatar">ZU</div>
           <p className="username">USERID</p>
+          <button onClick={logout}>Logout</button>
         </div>
       </div>
     </div>

@@ -12,12 +12,19 @@ const BuyActionWindow = ({ uid }) => {
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleBuyClick = () => {
+    // const token = localStorage.getItem("token");
     axios.post("http://localhost:3002/newOrder", {
-      name: uid,
-      qty: stockQuantity,
-      price: stockPrice,
-      mode: "BUY",
-    });
+        name: uid,
+        qty: stockQuantity,
+        price: stockPrice,
+        mode: "BUY",
+      },
+      {
+          // Authorization: `Bearer ${token}`,
+          withCredentials: true,
+        
+      }
+    );
 
     GeneralContext.closeBuyWindow();
   };

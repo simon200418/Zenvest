@@ -1,16 +1,30 @@
-import { useState } from 'react'
-import HomePage from './landing_page/home/HomePage'
+import { Routes, Route } from "react-router-dom";
 
-// import './App.css'
+import HomePage from "./landing_page/home/HomePage";
+import Login from "./landing_page/auth/Login";
+import Signup from "./landing_page/auth/Signup";
 
 function App() {
-  
-
   return (
-    <>
-        <HomePage/>
-    </>
-  )
+    <Routes>
+
+      <Route
+        path="/"
+        element={<HomePage />}
+      />
+
+      <Route
+        path="/login"
+        element={<Login />}
+      />
+
+      <Route
+        path="/signup"
+        element={<Signup />}
+      />
+
+    </Routes>
+  );
 }
 
-export default App
+export default App;

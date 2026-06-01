@@ -5,8 +5,14 @@ const Orders = () => {
   const [allOrders, setAllOrders] = useState([]);
 
   useEffect(() => {
+    // const token = localStorage.getItem("token");
+
     axios
-      .get("http://localhost:3002/allOrders")
+      .get("http://localhost:3002/allOrders", 
+        { 
+          withCredentials: true,
+        },
+      )
       .then((res) => {
         setAllOrders(res.data);
       })
@@ -47,9 +53,7 @@ const Orders = () => {
                     <td>₹{order.price.toFixed(2)}</td>
                     <td
                       className={
-                        order.mode?.toLowerCase() === "buy"
-                          ? "profit"
-                          : "loss"
+                        order.mode?.toLowerCase() === "buy" ? "profit" : "loss"
                       }
                     >
                       {order.mode}
@@ -74,10 +78,7 @@ const Orders = () => {
             <h5>
               ₹
               {allOrders
-                .reduce(
-                  (sum, order) => sum + order.qty * order.price,
-                  0
-                )
+                .reduce((sum, order) => sum + order.qty * order.price, 0)
                 .toFixed(2)}
             </h5>
             <p>Total Order Value</p>
