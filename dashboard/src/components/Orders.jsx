@@ -17,7 +17,7 @@ const Orders = (props) => {
         console.log(err);
       });
   
-      }, [props.refreshOrders]);
+      }, []);
 
   const deleteOrder = async (id) => {
     const confirmDelete =

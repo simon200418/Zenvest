@@ -31,7 +31,7 @@ export const GeneralContextProvider = (props) => {
       }}
     >
       {props.children}
-      {isBuyWindowOpen && <BuyActionWindow  onOrderPlaced={() => setRefreshOrders(prev => !prev)} uid={selectedStockUID} />}
+      {isBuyWindowOpen && <BuyActionWindow uid={selectedStockUID} />}
     </GeneralContext.Provider>
   );
 };
