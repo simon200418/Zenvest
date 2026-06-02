@@ -5,10 +5,7 @@ const Orders = () => {
   const [allOrders, setAllOrders] = useState([]);
 
   useEffect(() => {
-    // const token = localStorage.getItem("token");
-
-    axios
-      .get("http://localhost:3002/allOrders", 
+    axios.get("http://localhost:3002/allOrders", 
         { 
           withCredentials: true,
         },
@@ -20,6 +17,32 @@ const Orders = () => {
         console.log(err);
       });
   }, []);
+
+  const deleteOrder = async (id) => {
+    const confirmDelete =
+      window.confirm(
+        "Delete this order?"
+      );
+
+    if (!confirmDelete) return;
+
+    try {
+      await axios.delete(
+        `http://localhost:3002/deleteOrder/${id}`,
+        {
+          withCredentials: true,
+        }
+      );
+      setAllOrders(
+        allOrders.filter(
+          (order) => order._id !== id
+        )
+      );
+
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <>
@@ -39,6 +62,7 @@ const Orders = () => {
                 <th>Price</th>
                 <th>Mode</th>
                 <th>Total Value</th>
+                <th>Action</th>
               </tr>
             </thead>
 
@@ -59,6 +83,11 @@ const Orders = () => {
                       {order.mode}
                     </td>
                     <td>₹{totalValue.toFixed(2)}</td>
+                    <td>
+                      <button className="delete-btn" onClick={() => deleteOrder(order._id)}>
+                        Delete
+                      </button>
+                    </td>
                   </tr>
                 );
               })}

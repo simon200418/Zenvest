@@ -8,10 +8,8 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useEffect(() => {
-      // const token = localStorage.getItem("token");
     axios.get("http://localhost:3002/allHoldings" ,  
-      {
-        // 
+      { 
         withCredentials: true,
       },
     ).then((res) => {

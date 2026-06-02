@@ -1,10 +1,38 @@
-import React, { useState } from "react";
-
+import React, { useState , useEffect} from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 
 const Menu = () => {
+  
+  const [user, setUser] = useState(null);
+  
+  const avatarText = user?.name
+  ? user.name
+      .split(" ")
+      .map((word) => word[0])
+      .slice(0, 2)
+      .join("")
+      .toUpperCase()
+  : "ZV";
+
   const [selectedMenu, setSelectedMenu] = useState(0);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+
+  useEffect(() => {
+
+    axios.get("http://localhost:3002/verify",
+        {
+          withCredentials: true,
+        }
+      )
+      .then((res) => {
+        setUser(res.data.user);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+  }, []);
 
   const handleMenuClick = (index) => {
     setSelectedMenu(index);
@@ -14,12 +42,24 @@ const Menu = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
 
-  const logout = () => {
-  localStorage.removeItem("token");
-  localStorage.removeItem("user");
 
-  window.location.href = "/login";
-};
+  const logout = async () => {
+    try {
+      await axios.post(
+        "http://localhost:3002/logout",
+        {},
+        {
+          withCredentials: true,
+        }
+      );
+
+      window.location.href =
+        "http://localhost:5173/login";
+
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
@@ -98,9 +138,9 @@ const Menu = () => {
         </ul>
         <hr />
         <div className="profile" onClick={handleProfileClick}>
-          <div className="avatar">ZU</div>
-          <p className="username">USERID</p>
-          <button onClick={logout}>Logout</button>
+          <div className="avatar">{avatarText}</div>
+          <p className="username"> {user?.name.split(" ")[0] || "Loading..."} </p>
+          <button style={{color:"white" , fontSize:"15px" , backgroundColor:"#F6461A" , padding:"5px" , marginLeft:"30px" , borderRadius:"5px"}}  onClick={logout}>Logout</button>
         </div>
       </div>
     </div>

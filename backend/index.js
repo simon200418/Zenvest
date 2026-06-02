@@ -53,11 +53,9 @@ app.get(
 app.post("/logout", (req, res) => {
 
   res.clearCookie("token");
-
   res.json({
     message: "Logged out",
   });
-
 });
 
 
@@ -253,6 +251,7 @@ app.post("/newOrder" , authMiddleware , async(req , res)=>{
         qty: req.body.qty,
         price: req.body.price,
         mode: req.body.mode,
+        userId: req.user.userId,
     });
 
     newOrder.save();
@@ -261,7 +260,7 @@ app.post("/newOrder" , authMiddleware , async(req , res)=>{
 
 app.get("/allOrders", authMiddleware , async (req, res) => {
     try {
-        const orders = await OrdersModel.find({});
+        const orders = await OrdersModel.find({  userId: req.user.userId});
         res.json(orders);
     } catch (err) {
         res.status(500).json({
@@ -269,6 +268,27 @@ app.get("/allOrders", authMiddleware , async (req, res) => {
         });
     }
 });
+
+app.delete(
+  "/deleteOrder/:id",
+    authMiddleware,
+    async (req, res) => {
+
+      try {
+        await OrdersModel.findByIdAndDelete(
+          req.params.id
+        );
+        res.json({
+          message: "Order Deleted"
+        });
+
+      } catch (err) {
+        res.status(500).json({
+          message: "Failed to delete order"
+        });
+      }
+    }
+  );
 
 app.listen(PORT , ()=>{
     console.log("App Started!");
