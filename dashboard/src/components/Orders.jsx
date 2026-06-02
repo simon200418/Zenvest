@@ -12,6 +12,7 @@ const Orders = () => {
       )
       .then((res) => {
         setAllOrders(res.data);
+        window.location.reload();
       })
       .catch((err) => {
         console.log(err);
