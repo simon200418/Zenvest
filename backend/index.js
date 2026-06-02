@@ -254,7 +254,7 @@ app.post("/newOrder" , authMiddleware , async(req , res)=>{
         userId: req.user.userId,
     });
 
-    newOrder.save();
+    await newOrder.save();
     res.send("Order received!!")
 })
 
