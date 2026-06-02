@@ -3,7 +3,6 @@ import axios from "axios";
 
 const Orders = () => {
   const [allOrders, setAllOrders] = useState([]);
-  const { refreshOrders } = useContext(GeneralContext);
 
   useEffect(() => {
     axios.get("https://zenvest-jpg3.onrender.com/allOrders", 
@@ -18,7 +17,7 @@ const Orders = () => {
         console.log(err);
       });
   
-      }, [refreshOrders]);
+      }, []);
       
   const deleteOrder = async (id) => {
     const confirmDelete =

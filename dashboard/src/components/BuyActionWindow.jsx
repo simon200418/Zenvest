@@ -12,7 +12,6 @@ const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
   const { closeBuyWindow } = useContext(GeneralContext);
-  const { setRefreshOrders } = useContext(GeneralContext);
 
   const handleBuyClick = () => {
     
@@ -29,11 +28,7 @@ const BuyActionWindow = ({ uid }) => {
         
       }
     )
-    .then(() => {
-        setRefreshOrders((prev) => !prev);
         closeBuyWindow();
-      });
-    
   };
 
   const handleCancelClick = () => {
