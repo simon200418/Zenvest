@@ -11,7 +11,7 @@ const Positions = () => {
 
   useEffect(() => {
     // const token = localStorage.getItem("token");
-    axios.get("http://localhost:3002/allPositions" , 
+    axios.get("https://zenvest-jpg3.onrender.com/allPositions" , 
       {
         // Authorization: `Bearer ${token}`,
         withCredentials: true,

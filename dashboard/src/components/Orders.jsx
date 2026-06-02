@@ -5,7 +5,7 @@ const Orders = () => {
   const [allOrders, setAllOrders] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/allOrders", 
+    axios.get("https://zenvest-jpg3.onrender.com/allOrders", 
         { 
           withCredentials: true,
         },
@@ -28,7 +28,7 @@ const Orders = () => {
 
     try {
       await axios.delete(
-        `http://localhost:3002/deleteOrder/${id}`,
+        `https://zenvest-jpg3.onrender.com/deleteOrder/${id}`,
         {
           withCredentials: true,
         }

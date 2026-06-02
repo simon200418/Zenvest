@@ -14,7 +14,7 @@ const ProtectedRoute = ({ children }) => {
 
     axios
       .get(
-        "http://localhost:3002/verify",
+        "https://zenvest-jpg3.onrender.com/verify",
         {
           withCredentials: true,
         }
@@ -24,7 +24,7 @@ const ProtectedRoute = ({ children }) => {
       })
       .catch(() => {
         window.location.href =
-          "http://localhost:5173/login";
+          "https://zenvest-murex.vercel.app//login";
       })
       .finally(() => {
         setLoading(false);

@@ -22,7 +22,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",
+      "https://zenvest-murex.vercel.app/",
       "http://localhost:5174",
     ],
     credentials: true,

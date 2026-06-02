@@ -7,7 +7,7 @@ const Summary = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3002/verify", {
+      .get("https://zenvest-jpg3.onrender.com/verify", {
         withCredentials: true,
       })
       .then((res) => {
@@ -18,7 +18,7 @@ const Summary = () => {
       });
 
     axios
-      .get("http://localhost:3002/allHoldings", {
+      .get("https://zenvest-jpg3.onrender.com/allHoldings", {
         withCredentials: true,
       })
       .then((res) => {

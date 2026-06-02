@@ -20,7 +20,7 @@ const Menu = () => {
 
   useEffect(() => {
 
-    axios.get("http://localhost:3002/verify",
+    axios.get("https://zenvest-jpg3.onrender.com/verify",
         {
           withCredentials: true,
         }
@@ -46,7 +46,7 @@ const Menu = () => {
   const logout = async () => {
     try {
       await axios.post(
-        "http://localhost:3002/logout",
+        "https://zenvest-jpg3.onrender.com/logout",
         {},
         {
           withCredentials: true,
@@ -54,7 +54,7 @@ const Menu = () => {
       );
 
       window.location.href =
-        "http://localhost:5173/login";
+        "https://zenvest-murex.vercel.app//login";
 
     } catch (err) {
       console.log(err);
