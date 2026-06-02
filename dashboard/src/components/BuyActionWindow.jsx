@@ -11,7 +11,6 @@ import "./BuyActionWindow.css";
 const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
-  const { closeBuyWindow } = useContext(GeneralContext);
 
   const handleBuyClick = () => {
     
@@ -28,7 +27,7 @@ const BuyActionWindow = ({ uid }) => {
         
       }
     )
-        closeBuyWindow();
+        GeneralContext.closeBuyWindow();
   };
 
   const handleCancelClick = () => {
