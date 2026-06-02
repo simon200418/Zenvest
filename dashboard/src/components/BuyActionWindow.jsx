@@ -12,6 +12,7 @@ const BuyActionWindow = ({ uid }) => {
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleBuyClick = () => {
+    
     // const token = localStorage.getItem("token");
     axios.post("https://zenvest-jpg3.onrender.com/newOrder", {
         name: uid,
@@ -25,6 +26,12 @@ const BuyActionWindow = ({ uid }) => {
         
       }
     );
+    const confirmDelete =
+      window.confirm(
+        "Delete this order?"
+      );
+
+    if (!confirmDelete) return;
     GeneralContext.closeBuyWindow();
   };
 
