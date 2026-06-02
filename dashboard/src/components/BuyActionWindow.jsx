@@ -25,7 +25,6 @@ const BuyActionWindow = ({ uid }) => {
         
       }
     );
-
     GeneralContext.closeBuyWindow();
   };
 

@@ -11,12 +11,7 @@ const Orders = () => {
         },
       )
       .then((res) => {
-        setAllOrders(
-          (prev) => [
-            ...prev,
-            res.data
-          ]
-        );
+        setAllOrders(res.data);
       })
       .catch((err) => {
         console.log(err);
