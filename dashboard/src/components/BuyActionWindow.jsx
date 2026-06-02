@@ -13,9 +13,9 @@ const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
 
-  const handleBuyClick = () => {
+  const handleBuyClick = async() => {
     try{
-      axios.post("https://zenvest-jpg3.onrender.com/newOrder", {
+      await axios.post("https://zenvest-jpg3.onrender.com/newOrder", {
         name: uid,
         qty: stockQuantity,
         price: stockPrice,
@@ -37,7 +37,7 @@ const BuyActionWindow = ({ uid }) => {
   };
 
   const handleCancelClick = () => {
-    GeneralContext.closeBuyWindow();
+    closeBuyWindow();
   };
 
   return (
