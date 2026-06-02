@@ -49,7 +49,7 @@ const Login = () => {
           
           alert("Login Successful");
 
-      window.location.href = "http://localhost:5174";
+      window.location.href = "https://zenvest-l5v4.vercel.app/";
 
     } catch (err) {
       alert(
