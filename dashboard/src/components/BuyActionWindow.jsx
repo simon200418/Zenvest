@@ -1,21 +1,21 @@
-import React, { useState } from "react";
+import React, { useState , useContext} from "react";
 import { Link } from "react-router-dom";
 
 import axios from "axios";
-
 import GeneralContext from "./GeneralContext";
-
-
 import "./BuyActionWindow.css";
 
+
 const BuyActionWindow = ({ uid }) => {
+  // 1. Pull in the new triggerOrderRefresh function from context
+  const { closeBuyWindow, triggerOrderRefresh } = useContext(GeneralContext);
+  
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleBuyClick = () => {
-    
-    // const token = localStorage.getItem("token");
-    axios.post("https://zenvest-jpg3.onrender.com/newOrder", {
+    try{
+      axios.post("https://zenvest-jpg3.onrender.com/newOrder", {
         name: uid,
         qty: stockQuantity,
         price: stockPrice,
@@ -23,11 +23,17 @@ const BuyActionWindow = ({ uid }) => {
       },
       {
           // Authorization: `Bearer ${token}`,
-          withCredentials: true,
-        
-      }
-    )
-        GeneralContext.closeBuyWindow();
+          withCredentials: true,  
+      });
+
+        // 2. Call the trigger to notify the Orders component
+        triggerOrderRefresh();
+
+      // 3. Close the window
+        closeBuyWindow();
+    }catch(error){
+      console.error("Failed to place order:", error);
+    }
   };
 
   const handleCancelClick = () => {

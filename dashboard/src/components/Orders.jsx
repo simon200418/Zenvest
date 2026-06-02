@@ -1,23 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect , useContext } from "react";
 import axios from "axios";
 
 const Orders = () => {
   const [allOrders, setAllOrders] = useState([]);
 
+  // 1. Consume the refresh count from context
+  const { orderRefreshCount } = useContext(GeneralContext);
+
   useEffect(() => {
-    axios.get("https://zenvest-jpg3.onrender.com/allOrders", 
-        { 
-          withCredentials: true,
-        },
-      )
-      .then((res) => {
-        setAllOrders(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  
-      }, []);
+
+    const fetchOrders = async () => {
+      try{
+        axios.get("https://zenvest-jpg3.onrender.com/allOrders", 
+          { 
+            withCredentials: true,
+          },
+        )
+        .then((res) => {
+          setAllOrders(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      }catch (error) {
+        console.error("Error fetching orders:", error);
+      }
+    }; 
+      fetchOrders();
+      }, [orderRefreshCount]);
       
   const deleteOrder = async (id) => {
     const confirmDelete =
