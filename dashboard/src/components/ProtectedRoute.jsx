@@ -24,7 +24,7 @@ const ProtectedRoute = ({ children }) => {
       })
       .catch(() => {
         window.location.href =
-          "https://zenvest-murex.vercel.app//login";
+          "https://zenvest-murex.vercel.app/login";
       })
       .finally(() => {
         setLoading(false);

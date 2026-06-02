@@ -54,7 +54,7 @@ const Menu = () => {
       );
 
       window.location.href =
-        "https://zenvest-murex.vercel.app//login";
+        "https://zenvest-murex.vercel.app/login";
 
     } catch (err) {
       console.log(err);

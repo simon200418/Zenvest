@@ -23,7 +23,7 @@ app.use(
   cors({
     origin: [
       "https://zenvest-murex.vercel.app/",
-      "http://localhost:5174",
+      "https://zenvest-l5v4.vercel.app/",
     ],
     credentials: true,
   })
