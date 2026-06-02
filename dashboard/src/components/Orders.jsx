@@ -12,11 +12,11 @@ const Orders = () => {
       )
       .then((res) => {
         setAllOrders(res.data);
-        window.location.reload();
       })
       .catch((err) => {
         console.log(err);
       });
+      window.location.reload();
   }, []);
 
   const deleteOrder = async (id) => {
