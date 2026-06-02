@@ -28,6 +28,8 @@ export const GeneralContextProvider = (props) => {
       value={{
         openBuyWindow: handleOpenBuyWindow,
         closeBuyWindow: handleCloseBuyWindow,
+        refreshOrders,
+        setRefreshOrders,
       }}
     >
       {props.children}

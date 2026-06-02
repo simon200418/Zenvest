@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const Orders = (props) => {
+const Orders = () => {
   const [allOrders, setAllOrders] = useState([]);
+  const { refreshOrders } = useContext(GeneralContext);
 
   useEffect(() => {
     axios.get("https://zenvest-jpg3.onrender.com/allOrders", 
@@ -17,8 +18,8 @@ const Orders = (props) => {
         console.log(err);
       });
   
-      }, []);
-
+      }, [refreshOrders]);
+      
   const deleteOrder = async (id) => {
     const confirmDelete =
       window.confirm(

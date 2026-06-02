@@ -5,11 +5,14 @@ import axios from "axios";
 
 import GeneralContext from "./GeneralContext";
 
+
 import "./BuyActionWindow.css";
 
 const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
+  const { closeBuyWindow } = useContext(GeneralContext);
+  const { setRefreshOrders } = useContext(GeneralContext);
 
   const handleBuyClick = () => {
     
@@ -25,14 +28,12 @@ const BuyActionWindow = ({ uid }) => {
           withCredentials: true,
         
       }
-    );
-    const confirmDelete =
-      window.confirm(
-        "Delete this order?"
-      );
-
-    if (!confirmDelete) return;
-    GeneralContext.closeBuyWindow();
+    )
+    .then(() => {
+        setRefreshOrders((prev) => !prev);
+        closeBuyWindow();
+      });
+    
   };
 
   const handleCancelClick = () => {
