@@ -8,6 +8,8 @@ const GeneralContext = React.createContext({
 });
 
 export const GeneralContextProvider = (props) => {
+  const [refreshOrders, setRefreshOrders] =
+  useState(false);
   const [isBuyWindowOpen, setIsBuyWindowOpen] = useState(false);
   const [selectedStockUID, setSelectedStockUID] = useState("");
 
@@ -29,7 +31,7 @@ export const GeneralContextProvider = (props) => {
       }}
     >
       {props.children}
-      {isBuyWindowOpen && <BuyActionWindow uid={selectedStockUID} />}
+      {isBuyWindowOpen && <BuyActionWindow  onOrderPlaced={() => setRefreshOrders(prev => !prev)} uid={selectedStockUID} />}
     </GeneralContext.Provider>
   );
 };

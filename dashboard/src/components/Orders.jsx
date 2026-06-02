@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const Orders = () => {
+const Orders = (props) => {
   const [allOrders, setAllOrders] = useState([]);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const Orders = () => {
         console.log(err);
       });
   
-  }, []);
+      }, [props.refreshOrders]);
 
   const deleteOrder = async (id) => {
     const confirmDelete =
