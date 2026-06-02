@@ -254,8 +254,8 @@ app.post("/newOrder" , authMiddleware , async(req , res)=>{
         userId: req.user.userId,
     });
 
-    await newOrder.save();
-    res.send("Order received!!")
+    const savedOrder = await newOrder.save();
+    res.send(savedOrder);
 })
 
 app.get("/allOrders", authMiddleware , async (req, res) => {
