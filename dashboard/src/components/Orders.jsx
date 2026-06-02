@@ -16,7 +16,7 @@ const Orders = () => {
       .catch((err) => {
         console.log(err);
       });
-      window.location.reload();
+  
   }, []);
 
   const deleteOrder = async (id) => {
