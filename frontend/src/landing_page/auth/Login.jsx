@@ -40,7 +40,7 @@ const Login = () => {
           // );
           
           const res = await axios.post(
-            "http://localhost:3002/api/auth/login",
+            "https://zenvest-jpg3.onrender.com/api/auth/login",
             formData,
             {
               withCredentials: true,

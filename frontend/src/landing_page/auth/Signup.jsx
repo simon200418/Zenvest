@@ -27,7 +27,7 @@ const Signup = () => {
     try {
 
       await axios.post(
-        "http://localhost:3002/api/auth/register",
+        "https://zenvest-jpg3.onrender.com/api/auth/register",
         formData
       );
 
