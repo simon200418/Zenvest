@@ -22,8 +22,8 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://zenvest-murex.vercel.app/",
-      "https://zenvest-l5v4.vercel.app/",
+      "https://zenvest-murex.vercel.app",
+      "https://zenvest-l5v4.vercel.app",
     ],
     credentials: true,
   })
