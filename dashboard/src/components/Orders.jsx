@@ -17,7 +17,7 @@ const Orders = () => {
         console.log(err);
       });
   
-  }, [allOrders]);
+  }, []);
 
   const deleteOrder = async (id) => {
     const confirmDelete =
