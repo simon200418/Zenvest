@@ -9,7 +9,7 @@ const Awards = () => {
         </div>
         <div className='col-6 p-5 mt-5'>
             <h1>Largest Stock Broker in India</h1>
-            <p>2+ million  Zerodha clients contribute to over 15% of allthe volumes in India daily by trading and investing in: </p>
+            <p>2+ million  Zenvest clients contribute to over 15% of allthe volumes in India daily by trading and investing in: </p>
             <div className="row mt-5">
               <div className="col-6">
                 <ul>

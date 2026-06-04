@@ -45,8 +45,8 @@ const Footer = () => {
           <a className='text-decoration-none text-muted' href="">  Philosophy </a><br />
           <a className='text-decoration-none text-muted' href="">  Press & media </a><br />
           <a className='text-decoration-none text-muted' href="">  Careers </a><br />
-          <a className='text-decoration-none text-muted' href="">  Zerodha Cares (CSR) </a><br />
-          <a className='text-decoration-none text-muted' href="">  Zerodha.tech </a><br />
+          <a className='text-decoration-none text-muted' href="">  Zenvest Cares (CSR) </a><br />
+          <a className='text-decoration-none text-muted' href="">  Zenvest.tech </a><br />
           <a className='text-decoration-none text-muted' href="">  Open source </a><br />
           <a className='text-decoration-none text-muted' href="">  Referral program </a><br />
           
@@ -77,7 +77,7 @@ const Footer = () => {
 
       <div className='mt-5 text-muted' style={{fontSize:"14px"}}>
         <p>
-          Zenvest Broking Ltd.: Member of NSE, BSE, MCX & MSEI – SEBI Registration no.: INZ000031633 CDSL/NSDL: Depository services through Zerodha Broking Ltd. – SEBI Registration no.: IN-DP-431-2019 Registered Address: Zerodha Broking Ltd., #153/154, 4th Cross, Dollars Colony, Opp. Clarence Public School, J.P Nagar 4th Phase, Bengaluru - 560078, Karnataka, India. For any complaints pertaining to securities broking please write to <a href=""> complaints@zerodha.com </a>, for DP related to <a href=""> dp@zerodha.com </a>. Please ensure you carefully read the Risk Disclosure Document as prescribed by SEBI | ICF
+          Zenvest Broking Ltd.: Member of NSE, BSE, MCX & MSEI – SEBI Registration no.: INZ000031633 CDSL/NSDL: Depository services through Zenvest Broking Ltd. – SEBI Registration no.: IN-DP-431-2019 Registered Address: Zenvest Broking Ltd., #153/154, 4th Cross, Dollars Colony, Opp. Clarence Public School, J.P Nagar 4th Phase, Bengaluru - 560078, Karnataka, India. For any complaints pertaining to securities broking please write to <a href=""> complaints@zerodha.com </a>, for DP related to <a href=""> dp@zerodha.com </a>. Please ensure you carefully read the Risk Disclosure Document as prescribed by SEBI | ICF
         <br /><br />
           Procedure to file a complaint on <a href=""> SEBI SCORES: </a> Register on SCORES portal. Mandatory details for filing complaints on SCORES: Name, PAN, Address, Mobile Number, E-mail ID. Benefits: Effective Communication, Speedy redressal of the grievances
         </p>
@@ -99,7 +99,7 @@ const Footer = () => {
         <p>
           *Customers availing insurance advisory services offered by Ditto (Tacterial Consulting Private Limited | IRDAI Registered Corporate Agent (Composite) License No CA0738) will not have access to the exchange investor grievance redressal forum, SEBI SCORES/ODR, or arbitration mechanism for such products.
           <br />
-          Fixed deposit products offered on this platform are third-party products (TPP) and are not Exchange traded products. These are offered through Blostem Fintech Private Limited. Zerodha Broking Limited (SEBI Registration No.: INZ000031633) is acting solely as a distributor for these products. Any disputes arising with respect to such distribution activity will not have access to SEBI SCORES/ODR, Exchange Investor Grievance Redressal Forum, or Arbitration mechanism. Fixed deposits are regulated by the Reserve Bank of India (RBI).
+          Fixed deposit products offered on this platform are third-party products (TPP) and are not Exchange traded products. These are offered through Blostem Fintech Private Limited. Zenvest Broking Limited (SEBI Registration No.: INZ000031633) is acting solely as a distributor for these products. Any disputes arising with respect to such distribution activity will not have access to SEBI SCORES/ODR, Exchange Investor Grievance Redressal Forum, or Arbitration mechanism. Fixed deposits are regulated by the Reserve Bank of India (RBI).
         </p>
 
       </div>

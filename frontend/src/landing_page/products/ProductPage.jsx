@@ -21,7 +21,7 @@ const ProductPage = () => {
       <RightSection
         imageUrl="media/Images/console.png"
         productName="Console"
-        productDescription="The central dashboard for your Zerodha account. Gain insights into your trades and investments with in-depth reports and visualisations."
+        productDescription="The central dashboard for your Zenvest account. Gain insights into your trades and investments with in-depth reports and visualisations."
         learnMore=""
       />
 
@@ -38,7 +38,7 @@ const ProductPage = () => {
       <RightSection
         imageUrl="media/Images/kiteconnect.png"
         productName="Kite Connect API"
-        productDescription="The central dashboard for your Zerodha account. Gain insights into your trades and investments with in-depth reports and visualisations."
+        productDescription="The central dashboard for your Zenvest account. Gain insights into your trades and investments with in-depth reports and visualisations."
         learnMore=""
       />
 
@@ -53,7 +53,7 @@ const ProductPage = () => {
       />
 
       <p className="text-center mt-5 mb-5">
-        Want to know more about our technology stack? Check out the <a href="https://zerodha.tech"> Zerodha.tech </a>
+        Want to know more about our technology stack? Check out the <a href="https://zerodha.tech"> Zenvest.tech </a>
         blog.
       </p>
       <Universe />
