@@ -78,7 +78,7 @@ const Footer = () => {
       <div className='mt-5 text-muted' style={{fontSize:"14px"}}>
         <p>
           Zenvest Broking Ltd.: Member of NSE, BSE, MCX & MSEI – SEBI Registration no.: INZ000031633 CDSL/NSDL: Depository services through Zenvest Broking Ltd. – SEBI Registration no.: IN-DP-431-2019 Registered Address: Zenvest Broking Ltd., #153/154, 4th Cross, Dollars Colony, Opp. Clarence Public School, J.P Nagar 4th Phase, Bengaluru - 560078, Karnataka, India. For any complaints pertaining to securities broking please write to <a href=""> complaints@zerodha.com </a>, for DP related to <a href=""> dp@zerodha.com </a>. Please ensure you carefully read the Risk Disclosure Document as prescribed by SEBI | ICF
-        <br /><br />
+          <br />
           Procedure to file a complaint on <a href=""> SEBI SCORES: </a> Register on SCORES portal. Mandatory details for filing complaints on SCORES: Name, PAN, Address, Mobile Number, E-mail ID. Benefits: Effective Communication, Speedy redressal of the grievances
         </p>
 
